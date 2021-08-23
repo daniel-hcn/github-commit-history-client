@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  client:
+    container_name: github-commit-history-client
+    image: gch-client:latest
+    restart: always
+    build:
+      context: .
+    ports:
+      - '3000:3000'
+    networks:
+      - github-commit-history
+
+networks:
+  github-commit-history:
+    external: false
+    name: github-commit-history

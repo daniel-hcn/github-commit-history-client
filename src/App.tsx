@@ -16,12 +16,12 @@ function App() {
 
   const getBranches = async (): Promise<void> => {
     setState({ ...state, btnDisabled: false });
-    const response = await axios.get(`/github/repository/${encodeURIComponent(state.repository)}/branches`);
+    const response = await axios.get(`github/repository/${encodeURIComponent(state.repository)}/branches`);
     setBranches(response.data);
   };
 
   const getCommits = async (): Promise<void> => {
-    const response = await axios.get(`/github/repository/${encodeURIComponent(state.repository)}/commits?branchName=${state.branch}`);
+    const response = await axios.get(`github/repository/${encodeURIComponent(state.repository)}/commits?branchName=${state.branch}`);
     setCommits(response.data);
   };
 
