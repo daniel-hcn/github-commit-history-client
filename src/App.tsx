@@ -33,7 +33,7 @@ function App() {
     <Container fluid className="p-5">
       <Row className="justify-content-md-center">
         <Col xs lg="7">
-          <h1 className='header'>Github Commit History</h1>
+          <h1 className='header pb-3'>Github Commit History</h1>
 
           <Row className="p-2">
             <Col xs lg="7">
